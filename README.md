@@ -1,14 +1,14 @@
 Converter App
 ============
 
-- How it works
+### How it works
 	The Converter Application is a simple Java awt Frame application which provide the conversion of
 	Celsius to Fahrenheit and the FizzBuzz. The application provides a first selection window where you
 	can choose between the converters available. Once you have selected the converter the application
 	opens its window above the first one and you can start using the converter. The selection window
 	remain active and you can open at the same time other converters.
 
-- Design:
+### Design
 	The application has been developed using emergent design, OOP, continuous refactoring and 
 	Design Patterns. 
 	I used the assignment as an opportunity to create a flexible, maintainable and readable
@@ -20,8 +20,9 @@ Converter App
 	almost from the scratch. JUnit for testing.
 	
 	
-- Structure
-core:
+## STRUCTURE
+
+### Core
 	contains ConverterManager which maintains the converters and exposes their methods.
 	So far I've developed two converters: CelsiusToFahrenheitConverter and FizzBuzzConverter.
 	[Note]
@@ -31,18 +32,20 @@ core:
 	I could call the converter using the name (Converter Interface had the name() method).
 	I decided to remove that implementation in order to avoid overprovisioning, and to have less
 	code to maintain.
-main: 
+
+### Main 
 	Application: is the main class which initialize the components and starts the frame.
 	ConverterAdapter: used to adapt core to the frame takes the converterManager and it is
 	passed to the ConverterFrameFactory.
-test:
-	(do it better)
+
+### Test
 	Tests are just covering the results produced by the converters. 
 	The application is linear, the only conditional statements are used for implementing the 
 	fizzBuzz function. A maximum cyclomatic complexity of 3 (mean: 1.122; std. dev.:0.395; 
 	max:3) and the linear structure of the code let me to have a robust and error safe app without
 	using TDD or implementing a huge amount of tests.
-ui: 
+
+### Ui 
 	The user interface has been developed to be fully independent from the core classes.
 	The ConverterFrameFactory takes the ConverterAdapter, maintain and initializes 
 	(passing the adapter) the ConverterFrames, and start the ConverterSelectionFrame with itself as
@@ -55,7 +58,7 @@ ui:
 	ConverterFrameFactory (it is more or less the same logic which was in place for the older version 
 	of the core classes).
 
-Future Improvements:
+### Future Improvements
 	Add new features, you can create and add any kind of converter. The app has been developed thinking
 	of new and also unpredicted feature.
 	Create different interfaces, it could be a either a terminal than a web one. 
