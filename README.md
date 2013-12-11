@@ -11,8 +11,8 @@ Converter App
 ### Design
 	The application has been developed using emergent design, OOP, continuous refactoring and 
 	Design Patterns. 
-	I used the assignment as an opportunity to create a flexible, maintainable and readable
-	application which aims to the highest code quality and at the same time embraces the change.
+	I  create a flexible, maintainable and readable application which aims to the highest code 
+	quality and at the same time embraces the change.
 	I strongly used OOP in order to avoid if else statements which lead to increase
 	the Cyclomatic Complexity of the code. In order to monitor the metrics values I used the plugin 
 	metrics for eclipse (you can find the xml export of the metrics in the metricsTree file).
